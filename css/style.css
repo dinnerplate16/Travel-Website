@@ -50,17 +50,19 @@ nav {
     padding: 0;
 }
 
-nav ul {
+@media (max-width: 768px) {
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-}
+  }
 
-nav li{
+  nav li{
     flex: 1 1 50%;
+  }
 }
 
 nav ul li {
