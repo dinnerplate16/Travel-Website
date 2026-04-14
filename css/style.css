@@ -45,9 +45,9 @@ header p {
 }
 
 nav {
-    border-bottom: none;
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 nav ul {
@@ -55,31 +55,29 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100%;
     flex-wrap: nowrap;
+    width: 100%;
 }
 
 nav ul li {
-    flex: 1;
-    text-align: center;
+    flex: 1 1 0;
     margin: 0;
     padding: 0;
+    text-align: center;
     min-width: 0;
 }
 
-/* blue */
+/* Romanian flag colours */
 nav ul li:nth-child(1),
 nav ul li:nth-child(2) {
     background-color: #002B7F;
 }
 
-/* yellow */
 nav ul li:nth-child(3),
 nav ul li:nth-child(4) {
     background-color: #FCD116;
 }
 
-/* red */
 nav ul li:nth-child(5),
 nav ul li:nth-child(6) {
     background-color: #CE1126;
@@ -87,33 +85,50 @@ nav ul li:nth-child(6) {
 
 nav ul li a {
     display: block;
-    width: 100%;
-    padding: 14px 8px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.2;
+    padding: 16px 10px;
     text-decoration: none;
+    font-weight: bold;
     color: white;
-    cursor: pointer;
+    line-height: 1.2;
     box-sizing: border-box;
-    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-/* darker text on yellow */
 nav ul li:nth-child(3) a,
 nav ul li:nth-child(4) a {
     color: #222;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 nav ul li a.active {
-    background-color: transparent;
     outline: 3px solid black;
     outline-offset: -3px;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    nav ul li a {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 main {
@@ -209,7 +224,7 @@ ul {
     padding-left: 20px;
 }
 
-li {
+main li {
     margin-bottom: 10px;
 }
 
