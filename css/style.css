@@ -55,7 +55,12 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+}
+
+nav li{
+    flex: 1 1 50%;
 }
 
 nav ul li {
